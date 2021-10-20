@@ -9,7 +9,9 @@
 </head>
 <body>
     <livewire:components.navbar />
-    <livewire:login />
+    {{
+        $slot;
+    }}
     <livewire:scripts />
 </body>
 </html>
