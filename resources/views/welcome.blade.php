@@ -8,6 +8,7 @@
     <livewire:styles />
 </head>
 <body>
+    <livewire:components.navbar />
     <livewire:login />
     <livewire:scripts />
 </body>
