@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Components;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Navbar extends Component
@@ -10,4 +11,10 @@ class Navbar extends Component
     {
         return view('livewire.components.navbar');
     }
+
+    public function logoutUser(){
+        Auth::logout();
+        return redirect(route('login'));
+    }
+
 }

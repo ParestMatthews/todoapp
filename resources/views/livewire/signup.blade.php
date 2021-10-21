@@ -3,6 +3,7 @@
         Sign Up
     </h2>
     <form wire:submit.prevent="handleSubmit" class="w-3/12">
+        {{ csrf_field() }}
         <input type="text" wire:model="name" class="block border border-grey-light w-full p-3 mt-4" placeholder="Name">
         @error('name')
             <span class="text-red-500">{{ $message }}</span>
@@ -23,6 +24,6 @@
             <span class="text-red-500">{{ $message }}</span>
         @enderror
      
-        <button type="submit" class="w-full text-center py-3 bg-purple-400 hover:bg-purple-300 text-gray-100 hover:text-grey-200 my-4">Signup</button>
+        <button type="submit" class="w-full text-center py-3 bg-purple-400 hover:bg-purple-500 text-gray-100 hover:text-grey-200 my-4">Signup</button>
     </form>
 </div>

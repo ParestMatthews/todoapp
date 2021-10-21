@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", Home::class)->name('home');
-Route::get("/login", Login::class)->name('login');
+//group middleware for authentication
+Route::middleware(['auth'])->group(function () {
+    Route::get("/", Home::class)->name('home');
+});
+//group middleware for logged in users
+Route::middleware(['checkLoginUser'])->group(function () {
+    Route::get("/login", Login::class)->name('login');
 Route::get("/signup", Signup::class)->name('signup');
+});
+
+
