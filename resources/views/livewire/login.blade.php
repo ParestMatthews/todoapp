@@ -4,7 +4,7 @@
     </h2>
     
     <form wire:submit.prevent="handleSubmit" class="w-3/12">
-        {{ csrf_field() }}
+       
         <div class='mx-auto'>
             @if($error)
                 <p class="border border-red-300 bg-red-200 px-2 py-2 text-red-700">

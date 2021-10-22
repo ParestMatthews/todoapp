@@ -4,7 +4,7 @@
     
             <div class='flex space-x-4'>
                 <a href="/" class="flex item-center text-gray-100 hover:text-gray-200 py-4 px-4 transition duration-200">
-                    <span>To Do Application</span>
+                    <span class="font-semibold">To Do Application</span>
                 </a>
             </div>
 

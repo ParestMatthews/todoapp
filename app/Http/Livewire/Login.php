@@ -13,15 +13,14 @@ class Login extends Component
     public $email = '';
     public $password = '';
 
-    // protected $rules = ;
-
-
     public function handleSubmit(Request $request)
     {
-       $this->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
+        $this->error = '';
+        $this->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+       
         
         $auth = Auth::attempt([
             'email' => $this->email,

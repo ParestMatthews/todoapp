@@ -15,10 +15,10 @@ class CreateTodosTable extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('content');
-            $table->boolean('completed');
-            $table->boolean('is_deleted');
+            $table->boolean('completed')->default(false);
+            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
         });
     }

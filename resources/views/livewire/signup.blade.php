@@ -3,7 +3,7 @@
         Sign Up
     </h2>
     <form wire:submit.prevent="handleSubmit" class="w-3/12">
-        {{ csrf_field() }}
+
         <input type="text" wire:model="name" class="block border border-grey-light w-full p-3 mt-4" placeholder="Name">
         @error('name')
             <span class="text-red-500">{{ $message }}</span>
